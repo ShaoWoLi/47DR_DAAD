@@ -1,0 +1,131 @@
+{
+  "candidate": "dac9g_opt1",
+  "revision": "adc_capture_fix_capfix9g_20261110",
+  "target": "AArch64 standalone; DAC 9 GS/s; ADC 5 GS/s",
+  "published_at": "2026-11-10T16:30:00+08:00",
+  "xsa": "db6318c140a7b3a296b7917b052d177eace45f6f7195db2908e59a0887f5fe1b",
+  "elf": "321dfd6d2129c4b39fc169cce36420b032e674a645e243ce6e077deca61a8b9d",
+  "elf_bytes": 1574256,
+  "board_tested": true,
+  "test_scope": "initialization_and_ch2_loopback_capture",
+  "consecutive_successful_initializations": 2,
+  "power_cycle_cold_boot_tested": false,
+  "rf_loopback_tested": false,
+  "gui_end_to_end_board_tested": false,
+  "init_protocol_version": 1,
+  "init_order": [
+    "PS reset and initialization",
+    "run ELF to prepare and lock LMK clocks",
+    "halt A53 and program matching PL",
+    "acknowledge PL and resume A53",
+    "RFDC setup and ADC/DAC MTS",
+    "assert CONFIG_DONE and PS ready after success"
+  ],
+  "timing": {
+    "wns_ns": 0.001,
+    "tns_ns": 0.0,
+    "whs_ns": 0.003,
+    "ths_ns": 0.0,
+    "wpws_ns": 0.089,
+    "setup_failing_endpoints": 0,
+    "hold_failing_endpoints": 0,
+    "pulse_width_failing_endpoints": 0,
+    "drc_errors": 0,
+    "drc_warnings": 13,
+    "bus_skew_violations": 0
+  },
+  "board_tests": [
+    {
+      "run": 3,
+      "passed": true,
+      "program_log": "logs/program_9g_stable_sequence_run3_20261109.log",
+      "ps_trace": "logs/read_init_stable_sequence_run3_20261109.log",
+      "initializer_transcript": "app_data/init_stable_sequence_run3_20261109.log",
+      "jtag_log": "logs/verify_9g_stable_ready_run3_console_20261109.log",
+      "init_stage": 99,
+      "config_done": 1,
+      "ps_ready": 1,
+      "fault": 0,
+      "fault_channels": 0,
+      "dac_mts_tiles": "0xf",
+      "adc_mts_tiles": "0xf",
+      "capture_test": "CH2 -> ADC CH2, 65520 samples, state=2 done"
+    },
+    {
+      "run": 4,
+      "passed": true,
+      "program_log": "logs/program_9g_stable_sequence_run4_20261109.log",
+      "ps_trace": "logs/read_init_stable_sequence_run4_20261109.log",
+      "initializer_transcript": "app_data/init_stable_sequence_run4_20261109.log",
+      "jtag_log": "logs/verify_9g_stable_ready_run4_console_20261109.log",
+      "init_stage": 99,
+      "config_done": 1,
+      "ps_ready": 1,
+      "fault": 0,
+      "fault_channels": 0,
+      "dac_mts_tiles": "0xf",
+      "adc_mts_tiles": "0xf",
+      "capture_test": "CH2 -> ADC CH2, 65520 samples, state=2 done"
+    }
+  ],
+  "artifacts": {
+    "rf_awg_scope_v1.bit": {
+      "sha256": "7b21389fed0c0d3ae71631b1f1131679c740d08284239fc2d9555d09fb3f16d6",
+      "bytes": 20401079
+    },
+    "rf_awg_scope_v1.ltx": {
+      "sha256": "2eb94ceaff8c58e527ffef0d8f992ff84fafbbf79b0ef91f56e53e31ccb29dfa",
+      "bytes": 8866
+    },
+    "rf_awg_scope_v1.xsa": {
+      "sha256": "db6318c140a7b3a296b7917b052d177eace45f6f7195db2908e59a0887f5fe1b",
+      "bytes": 3680940
+    },
+    "rf_awg_init.elf": {
+      "sha256": "321dfd6d2129c4b39fc169cce36420b032e674a645e243ce6e077deca61a8b9d",
+      "bytes": 1574256
+    },
+    "psu_init.tcl": {
+      "sha256": "26704ca3055422c7b49ac1dcbe88aef0cac89a3d1051f4f0e7fa239e99bdc988",
+      "bytes": 894288
+    },
+    "init_protocol.txt": {
+      "sha256": "d027949a52ebaf089a85e15efe271705aa6e694c26dd6413539e95e54f5a0a33",
+      "bytes": 205
+    },
+    "hardware_validation.json": {
+      "sha256": "64d41887ebe577b348284137ab7924cdc4d0af3123de45b691b91c7b3c19b3c4",
+      "bytes": 913
+    },
+    "timing_summary.rpt": {
+      "sha256": "afb29cbe9327235be2f03d480245501e06f1f5e8af652a9d150a06ede7af8adf",
+      "bytes": 2638523
+    },
+    "timing_audit.rpt": {
+      "sha256": "ef2e91b2715125cfe9d841e601a718debe1f20a43881b10f3919eae00d4861f4",
+      "bytes": 2638536
+    },
+    "bus_skew.rpt": {
+      "sha256": "4e0be65b296414b5f23db3af0ed002fac10f9def21ad64e1ddeb39728d968b4a",
+      "bytes": 210762
+    },
+    "drc.rpt": {
+      "sha256": "6187c9bc111b1d41a398d64db94b9dedcacf91eda5e8c14752dfda73f1c3e995",
+      "bytes": 13656
+    },
+    "clock_utilization.rpt": {
+      "sha256": "0a55ea854ef65ca8d9abd8d2026e93f4caa269c6130e1a127126a4935e85a129",
+      "bytes": 142043
+    }
+  },
+  "source_sha256": {
+    "scripts/program.tcl": "80eb3e1b81902e379d2db916ef197f00d7ee393eeae4402f03d95b97254ad0aa",
+    "scripts/build_9g_candidate.ps1": "4c3a4bf641ca1436196db7f844e4dc1cd380ba9d01ec8632a1908e03e4b8dd87",
+    "scripts/build_9g_mts_candidate.tcl": "96408f381e4ccfc3789d85b86a2dfc6c742923a2ee75cd3e72d84da14a46725b",
+    "software/src/main.c": "8102d6af51acefefbfb7de767edda6246cf18adf55b3173661d24f8463d5d61e",
+    "software/src/rfsoc/xrfdc_dcp.c": "b0d99b7b1f966de9459021fc91dbf91d2beeb34b9ba8975c493b99af4c23429d",
+    "rtl/candidates/dac9g_mts/adaloop_top.v": "7749c2112b91700f6b3c1e9cdac31b082dc364c3b0bd90cb35b2d720c210e49b",
+    "constraints/timing_init_mts_async.xdc": "9fb5817e6da684db31b33ac7033e7b05af7d089f0ea6b9400ca8245419d7cde8"
+  },
+  "previous_package": "hardware/archive_dac9g_before_init_fix_20261109"
+}

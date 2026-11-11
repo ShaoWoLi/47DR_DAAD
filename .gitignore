@@ -1,0 +1,34 @@
+# Local editor and operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+**/__pycache__/
+*.py[cod]
+
+# Vivado/Vitis generated state
+**/.Xil/
+**/*.cache/
+**/*.gen/
+**/*.runs/
+**/*.ip_user_files/
+**/*.sim/
+**/*.hw/
+**/xsim.dir/
+**/webtalk*.jou
+**/webtalk*.log
+*.jou
+*.log
+*.pb
+*.tmp
+*.bak
+
+# Machine-local data and captures
+**/app_data/
+**/captures/
+**/sessions/
+**/settings.json
+**/waveforms/
+**/software/objects/
+**/software/platform/
+
+# Keep the current deployment package and curated timing artifacts versioned.

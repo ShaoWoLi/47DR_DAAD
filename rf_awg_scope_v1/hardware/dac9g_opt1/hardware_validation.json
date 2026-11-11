@@ -1,0 +1,31 @@
+{
+  "bit_sha256": "7b21389fed0c0d3ae71631b1f1131679c740d08284239fc2d9555d09fb3f16d6",
+  "xsa_sha256": "db6318c140a7b3a296b7917b052d177eace45f6f7195db2908e59a0887f5fe1b",
+  "elf_sha256": "321dfd6d2129c4b39fc169cce36420b032e674a645e243ce6e077deca61a8b9d",
+  "embedded_bit_matches": true,
+  "adc_ram_layout": "0x00020001",
+  "timing": {
+    "wns_ns": 0.001,
+    "whs_ns": 0.003,
+    "wpws_ns": 0.089
+  },
+  "board_tested": true,
+  "test_scope": "initialization_and_ch2_loopback_capture",
+  "initialization": {
+    "init_stage": 99,
+    "config_done": 1,
+    "ps_ready": 1,
+    "fault": 0,
+    "fault_channels": 0,
+    "log": "capfix9g_init_trace.log"
+  },
+  "capture_test": {
+    "tx_channel": 2,
+    "adc_channel_mask": 4,
+    "samples": 65520,
+    "state": 2,
+    "csv": "app_data/captures/adc_ch2_capfix_20261110.csv",
+    "matlab_fft_peak_hz": 99587912,
+    "zero_fraction": 0
+  }
+}

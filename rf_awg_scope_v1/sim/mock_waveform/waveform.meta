@@ -1,0 +1,5 @@
+samples 96
+fs_hz 9000000000
+nco_hz 0
+channel_mask 1
+sample_format 1

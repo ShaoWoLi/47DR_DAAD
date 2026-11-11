@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>47DR 波形与频谱</title>
+<style>
+body{margin:0;background:#101821;color:#e7eef6;font:15px system-ui,sans-serif}main{max-width:1300px;margin:auto;padding:28px}
+h1{font-size:26px;margin:0 0 8px}p{color:#a9b9cb}section{background:#192532;border:1px solid #304252;border-radius:12px;padding:18px;margin:18px 0}
+label{display:inline-flex;align-items:center;gap:8px;margin:7px 16px 7px 0}select,input{background:#101821;color:#e7eef6;border:1px solid #496075;border-radius:5px;padding:6px}input[type=range]{width:260px}
+canvas{width:100%;height:330px;display:block}#facts{line-height:1.8;font-variant-numeric:tabular-nums}.legend{color:#7ce0ce}.q{color:#ffbe7d}.env{color:#afacff}
+</style><main><h1>47DR 波形与频谱</h1><p>完整 I/Q 记录 · 幅度单位 ADC code · FFT 幅度相对 16 bit 数字满量程</p>
+<section><label>通道 <select id="channel"></select></label><label>显示点数 <select id="span"><option>256</option><option selected>1024</option><option>4096</option><option>16384</option></select></label>
+<label>起始位置 <input id="offset" type="range" value="0" min="0"></label><label><input id="rf" type="checkbox">频率轴显示射频</label><div id="facts"></div></section>
+<section><div><span class="legend">━ I</span>　<span class="q">━ Q</span>　<span class="env">━ 包络</span></div><canvas id="time"></canvas></section>
+<section><div>复数双边频谱 · Hann 窗 · 幅度经过窗增益修正</div><canvas id="spectrum"></canvas></section>
+<p>记录连续性已检查。射频频率方向须用已知单音确认；模拟伏特/dBm 需要标定。I/Q 仅包含 RFDC 下变频与抽取后的通带。</p></main>
+<script>
+const capture=/*CAPTURE_DATA*/null;
+const $=id=>document.getElementById(id), meta=capture.meta;
+if(meta.synthetic)document.querySelector('h1').textContent+=' · 模拟数据演示';
+for(let c=0;c<8;c++){const o=document.createElement('option');o.value=c;o.disabled=!(meta.channel_mask&(1<<c));o.textContent=`CH${c}${o.disabled?'（未校验）':''}`;$('channel').append(o)}
+$('channel').value=Array.from({length:8},(_,c)=>c).find(c=>meta.channel_mask&(1<<c));
+$('offset').max=Math.max(0,meta.samples-4);
+function chart(id,traces,xmin,xmax,ymin,ymax,xlabel,ylabel){
+ const el=$(id),r=el.getBoundingClientRect(),d=window.devicePixelRatio||1;el.width=r.width*d;el.height=r.height*d;
+ const ctx=el.getContext('2d');ctx.scale(d,d);const w=r.width,h=r.height,L=72,R=20,T=25,B=48,pw=w-L-R,ph=h-T-B;
+ ctx.font='12px system-ui';ctx.lineWidth=1;ctx.strokeStyle='#304252';ctx.fillStyle='#a9b9cb';
+ for(let k=0;k<=4;k++){let x=L+k*pw/4,y=T+k*ph/4;ctx.beginPath();ctx.moveTo(x,T);ctx.lineTo(x,T+ph);ctx.moveTo(L,y);ctx.lineTo(L+pw,y);ctx.stroke();ctx.fillText((ymax-k*(ymax-ymin)/4).toPrecision(4),3,y+4);ctx.fillText((xmin+k*(xmax-xmin)/4).toFixed(3),x-18,T+ph+20)}
+ ctx.fillText(xlabel,L+pw/2-20,h-6);ctx.fillText(ylabel,4,13);
+ ctx.save();ctx.beginPath();ctx.rect(L,T,pw,ph);ctx.clip();
+ for(const trace of traces){const a=trace.values;ctx.strokeStyle=trace.color;ctx.lineWidth=1.2;ctx.beginPath();
+  if(a.length<=pw*2){a.forEach((v,i)=>{const x=L+i*pw/Math.max(1,a.length-1),y=T+(ymax-v)*ph/(ymax-ymin);i?ctx.lineTo(x,y):ctx.moveTo(x,y)})}
+  else{const pixels=Math.floor(pw);for(let px=0;px<pixels;px++){let lo=Infinity,hi=-Infinity;for(let j=Math.floor(px*a.length/pixels);j<Math.floor((px+1)*a.length/pixels);j++){lo=Math.min(lo,a[j]);hi=Math.max(hi,a[j])}let x=L+px;ctx.moveTo(x,T+(ymax-lo)*ph/(ymax-ymin));ctx.lineTo(x,T+(ymax-hi)*ph/(ymax-ymin))}}
+  ctx.stroke()}
+ ctx.restore();
+}
+function draw(){
+ const c=+$('channel').value,start=+$('offset').value,n=Math.min(+$('span').value,meta.samples-start);
+ const i=capture.i[c].slice(start,start+n),q=capture.q[c].slice(start,start+n),env=i.map((v,k)=>Math.hypot(v,q[k]));
+ let peak=1;for(let k=0;k<n;k++)peak=Math.max(peak,Math.abs(i[k]),Math.abs(q[k]),env[k]);peak*=1.1;
+ chart('time',[{values:i,color:'#7ce0ce'},{values:q,color:'#ffbe7d'},{values:env,color:'#afacff'}],start/meta.fs_hz*1e6,(start+n-1)/meta.fs_hz*1e6,-peak,peak,'时间 / μs','ADC code');
+ const freqOffset=$('rf').checked?meta.nco_hz:0;
+ chart('spectrum',[{values:capture.spectrum[c],color:'#7ce0ce'}],(freqOffset-meta.fs_hz/2)/1e6,(freqOffset+meta.fs_hz/2-meta.fs_hz/meta.samples)/1e6,-140,10,'频率 / MHz','相对数字满量程 / dB');
+ const s=meta.channels[c];$('facts').textContent=`Fs ${(meta.fs_hz/1e6).toFixed(2)} MS/s　|　${meta.samples} 点 / 通道　|　记录 ${(meta.record_seconds*1e6).toFixed(3)} μs　|　FFT bin ${(meta.fft_bin_hz/1e3).toFixed(3)} kHz　|　CH${c} 峰值 ${(s.peak_baseband_hz/1e6).toFixed(6)} MHz（基带）　|　RMS ${s.rms_code.toFixed(2)} code`;
+}
+for(const id of ['channel','span','offset','rf'])$(id).addEventListener('input',draw);window.addEventListener('resize',draw);draw();
+</script></html>
