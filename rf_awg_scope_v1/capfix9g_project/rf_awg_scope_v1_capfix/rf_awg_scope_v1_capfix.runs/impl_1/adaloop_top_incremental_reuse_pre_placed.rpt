@@ -1,0 +1,167 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Tue Nov 10 09:58:31 2026
+| Host         : DESKTOP-R1144H2 running 64-bit major release  (build 9200)
+| Command      : report_incremental_reuse -file adaloop_top_incremental_reuse_pre_placed.rpt
+| Design       : adaloop_top
+| Device       : xczu47dr
+| Design State : Unknown
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Incremental Implementation Information
+
+Table of Contents
+-----------------
+1. Incremental Flow Summary
+2. Reuse Summary
+3. Reference Checkpoint Information
+4. Comparison with Reference Run
+5. Optimization Comparison With Reference Run
+5.1 iphys_opt_replay Optimizations
+5.2 QoR Suggestion Optimizations
+6. Command Comparison with Reference Run
+6.1 Reference:
+6.2 Incremental:
+7. Non Reuse Information
+
+1. Incremental Flow Summary
+---------------------------
+
++-----------------------+------------------+
+|    Flow Information   |       Value      |
++-----------------------+------------------+
+| Synthesis Flow        |          Default |
+| Auto Incremental      |               No |
+| Incremental Directive | RuntimeOptimized |
+| Target WNS            |              0.0 |
+| QoR Suggestions       |                0 |
++-----------------------+------------------+
+
+
+2. Reuse Summary
+----------------
+
++-------+----------------------+----------------------------+--------------------+--------+
+|  Type | Matched % (of Total) | Current Reuse % (of Total) | Fixed % (of Total) |  Total |
++-------+----------------------+----------------------------+--------------------+--------+
+| Cells |                98.94 |                      98.85 |               0.01 |  82166 |
+| Nets  |                93.45 |                      81.40 |               0.00 |  82774 |
+| Pins  |                    - |                      82.76 |                  - | 431382 |
+| Ports |               100.00 |                     100.00 |             100.00 |     44 |
++-------+----------------------+----------------------------+--------------------+--------+
+
+
+3. Reference Checkpoint Information
+-----------------------------------
+
++----------------+-----------------------------------------------------------------------------------------+
+| DCP Location:  | E:/47dr_ADDA/stable9g/rf_awg_scope_v1_mts.runs/impl_1/adaloop_top_postroute_physopt.dcp |
++----------------+-----------------------------------------------------------------------------------------+
+
+
++--------------------------------+----------------------------+
+|         DCP Information        |            Value           |
++--------------------------------+----------------------------+
+| Vivado Version                 |                     2025.2 |
+| DCP State                      |                 POST_ROUTE |
+| Recorded WNS                   |                      0.000 |
+| Recorded WHS                   |                      0.008 |
+| Reference Speed File Version   | PRODUCTION 1.32 01-31-2021 |
+| Incremental Speed File Version | PRODUCTION 1.32 01-31-2021 |
++--------------------------------+----------------------------+
+* Recorded WNS/WHS timing numbers are estimated timing numbers. They may vary slightly from sign-off timing numbers.
+
+
+4. Comparison with Reference Run
+--------------------------------
+
++-----------------+---------------------------+---------------------------+---------------------------+
+|                 |          WNS(ns)          |  Runtime(elapsed)(hh:mm)  |    Runtime(cpu)(hh:mm)    |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|      Stage      |  Reference  | Incremental |  Reference  | Incremental |  Reference  | Incremental |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| synth_design    |             |             |       00:02 |       00:02 |       00:02 |       00:02 |
+| opt_design      |             |             |     < 1 min |       00:01 |     < 1 min |     < 1 min |
+| read_checkpoint |             |             |             |       00:03 |             |       00:04 |
+| place_design    |      -0.198 |             |       00:17 |             |       00:24 |             |
+| phys_opt_design |      -0.198 |             |       00:03 |             |       00:05 |             |
+| route_design    |       0.000 |             |       00:41 |             |       01:08 |             |
+| phys_opt_design |       0.000 |             |     < 1 min |             |     < 1 min |             |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+5. Optimization Comparison With Reference Run
+---------------------------------------------
+
+5.1 iphys_opt_replay Optimizations
+----------------------------------
+
++-------------------------+--------+------------+
+| iphys_opt_design replay | Reused | Not Reused |
++-------------------------+--------+------------+
+| fanout_opt              |     47 |          0 |
+| equ_drivers_opt         |     25 |         35 |
+| create_bufg             |      1 |          0 |
+| critical_cell_opt       |      5 |          0 |
++-------------------------+--------+------------+
+
+
+5.2 QoR Suggestion Optimizations
+--------------------------------
+
++-------------------------------------+-------+
+|           QoR Suggestions           | Value |
++-------------------------------------+-------+
+| QoR Suggestions (Recommended)       |     0 |
+|   Suggestions Included In Reference |     0 |
+|     Yet to apply                    |     0 |
+|     Applied                         |     0 |
+|     Failed to apply                 |     0 |
+|   New Suggestions (INCR_FRIENDLY=1) |     0 |
+|     Yet to apply                    |     0 |
+|     Applied                         |     0 |
+|     Failed to apply                 |     0 |
+| QoR Suggestions (Not Recommended)   |     0 |
+|   New Suggestions (INCR_FRIENDLY=0) |     0 |
+|     Yet to apply                    |     0 |
+|     Applied                         |     0 |
+|     Failed to apply                 |     0 |
+| Disabled New Suggestions            |     0 |
++-------------------------------------+-------+
+
+
+6. Command Comparison with Reference Run
+----------------------------------------
+
+6.1 Reference:
+--------------
+synth_design-define default::[not_specified] -verilog_define default::[not_specified] -vhdl_define default::[not_specified] -top  adaloop_top -part  xczu47dr-fsve1156-2-i 
+opt_design -directive Explore
+place_design -directive Explore
+phys_opt_design -directive Explore
+route_design -directive Explore  -tns_cleanup
+phys_opt_design -directive Explore
+
+6.2 Incremental:
+----------------
+synth_design-define default::[not_specified] -verilog_define default::[not_specified] -vhdl_define default::[not_specified] -top  adaloop_top -part  xczu47dr-fsve1156-2-i 
+opt_design -directive Explore
+read_checkpoint -directive RuntimeOptimized  -incremental E:/47dr_ADDA/stable9g/rf_awg_scope_v1_mts.runs/impl_1/adaloop_top_postroute_physopt.dcp
+
+7. Non Reuse Information
+------------------------
+
++------------------------------------------------------+-------+
+|                         Type                         |   %   |
++------------------------------------------------------+-------+
+| Non-Reused Cells                                     |  1.14 |
+|   New                                                |  0.85 |
+|   Discarded illegal placement due to netlist changes |  0.28 |
+|   Discarded to improve timing                        |  0.01 |
+| Partially reused nets                                |  2.01 |
+| Non-Reused nets                                      | 16.57 |
+| Non-Reused Ports                                     |  0.00 |
++------------------------------------------------------+-------+
+
+

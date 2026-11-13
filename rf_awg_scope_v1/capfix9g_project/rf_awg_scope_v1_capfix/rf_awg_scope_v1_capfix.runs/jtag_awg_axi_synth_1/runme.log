@@ -1,0 +1,391 @@
+
+*** Running vivado
+    with args -log jtag_awg_axi.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source jtag_awg_axi.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Nov  8 16:43:45 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source jtag_awg_axi.tcl -notrace
+Command: synth_design -top jtag_awg_axi -part xczu47dr-fsve1156-2-i -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu47dr'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu47dr'
+INFO: [Device 21-403] Loading part xczu47dr-fsve1156-2-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 42984
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1965.945 ; gain = 385.844
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'jtag_awg_axi' [e:/s9_dac9000/b512s9g_opt1/rf_awg_scope_v1.gen/sources_1/ip/jtag_awg_axi/synth/jtag_awg_axi.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [E:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (0#1) [E:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized2' [E:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized2' (0#1) [E:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-7071] port 'sl_iport0' of module 'jtag_axi_v1_2_23_jtag_axi' is unconnected for instance 'inst' [e:/s9_dac9000/b512s9g_opt1/rf_awg_scope_v1.gen/sources_1/ip/jtag_awg_axi/synth/jtag_awg_axi.v:140]
+INFO: [Synth 8-7071] port 'sl_oport0' of module 'jtag_axi_v1_2_23_jtag_axi' is unconnected for instance 'inst' [e:/s9_dac9000/b512s9g_opt1/rf_awg_scope_v1.gen/sources_1/ip/jtag_awg_axi/synth/jtag_awg_axi.v:140]
+INFO: [Synth 8-7023] instance 'inst' of module 'jtag_axi_v1_2_23_jtag_axi' has 41 connections declared, but only 39 given [e:/s9_dac9000/b512s9g_opt1/rf_awg_scope_v1.gen/sources_1/ip/jtag_awg_axi/synth/jtag_awg_axi.v:140]
+INFO: [Synth 8-6155] done synthesizing module 'jtag_awg_axi' (0#1) [e:/s9_dac9000/b512s9g_opt1/rf_awg_scope_v1.gen/sources_1/ip/jtag_awg_axi/synth/jtag_awg_axi.v:53]
+INFO: [Synth 8-7129] Port axi_rd_reset in module jtag_axi_v1_2_23_read_axilite is either unconnected or has no load
+INFO: [Synth 8-7129] Port rx_fifo_full in module jtag_axi_v1_2_23_read_axilite is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_wr_reset in module jtag_axi_v1_2_23_write_axilite is either unconnected or has no load
+INFO: [Synth 8-7129] Port tx_fifo_empty in module jtag_axi_v1_2_23_write_axilite is either unconnected or has no load
+INFO: [Synth 8-7129] Port write_data_valid in module jtag_axi_v1_2_23_write_axilite is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awid[0] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awlen[7] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awlen[6] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awlen[5] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awlen[4] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awlen[3] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awlen[2] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awlen[1] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awlen[0] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awsize[2] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awsize[1] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awsize[0] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awburst[1] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awburst[0] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awlock in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awcache[3] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awcache[2] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awcache[1] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awcache[0] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awqos[3] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awqos[2] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awqos[1] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_awqos[0] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_wlast in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arid[0] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arlen[7] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arlen[6] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arlen[5] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arlen[4] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arlen[3] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arlen[2] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arlen[1] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arlen[0] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arsize[2] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arsize[1] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arsize[0] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arburst[1] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arburst[0] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arlock in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arcache[3] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arcache[2] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arcache[1] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arcache[0] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arqos[3] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arqos[2] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arqos[1] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_arqos[0] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_bid[0] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_rlast in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_rid[0] in module jtag_axi_v1_2_23_axi_bridge is either unconnected or has no load
+INFO: [Synth 8-7129] Port ALMOST_FULL_I in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_I in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port ALMOST_EMPTY_I in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_I in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_ACK_I in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port OVERFLOW_I in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port UNDERFLOW_I in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DATA_COUNT_I[4] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DATA_COUNT_I[3] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DATA_COUNT_I[2] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DATA_COUNT_I[1] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DATA_COUNT_I[0] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_DATA_COUNT_I[4] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_DATA_COUNT_I[3] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_DATA_COUNT_I[2] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_DATA_COUNT_I[1] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_DATA_COUNT_I[0] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_DATA_COUNT_I[4] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_DATA_COUNT_I[3] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_DATA_COUNT_I[2] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_DATA_COUNT_I[1] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_DATA_COUNT_I[0] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SBITERR_I in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DBITERR_I in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_RST in module wr_status_flags_as__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port RST_FULL_FF in module wr_status_flags_as__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SAFETY_CKT_WR_RST in module wr_status_flags_as__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS3[3] in module wr_status_flags_as__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS3[2] in module wr_status_flags_as__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS3[1] in module wr_status_flags_as__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS3[0] in module wr_status_flags_as__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port RST in module wr_bin_cntr__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_EN_INTO_LOGIC in module wr_logic__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_RST_INTO_LOGIC in module wr_logic__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_EN in module wr_logic__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SRST_FULL_FF in module wr_logic__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_RST_BUSY in module wr_logic__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port EMPTY in module wr_logic__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port RAM_RD_EN in module wr_logic__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port ALMOST_EMPTY in module wr_logic__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH[3] in module wr_logic__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH[2] in module wr_logic__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH[1] in module wr_logic__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH[0] in module wr_logic__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[3] in module wr_logic__parameterized0 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2468.660 ; gain = 888.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2468.660 ; gain = 888.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2468.660 ; gain = 888.559
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.162 . Memory (MB): peak = 2468.660 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/s9_dac9000/b512s9g_opt1/rf_awg_scope_v1.gen/sources_1/ip/jtag_awg_axi/jtag_awg_axi_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [e:/s9_dac9000/b512s9g_opt1/rf_awg_scope_v1.gen/sources_1/ip/jtag_awg_axi/jtag_awg_axi_ooc.xdc] for cell 'inst'
+Parsing XDC File [e:/s9_dac9000/b512s9g_opt1/rf_awg_scope_v1.gen/sources_1/ip/jtag_awg_axi/constraints/jtag_axi.xdc] for cell 'inst'
+Finished Parsing XDC File [e:/s9_dac9000/b512s9g_opt1/rf_awg_scope_v1.gen/sources_1/ip/jtag_awg_axi/constraints/jtag_axi.xdc] for cell 'inst'
+Parsing XDC File [E:/s9_dac9000/b512s9g_opt1/rf_awg_scope_v1.runs/jtag_awg_axi_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/s9_dac9000/b512s9g_opt1/rf_awg_scope_v1.runs/jtag_awg_axi_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/jtag_awg_axi_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/jtag_awg_axi_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 8 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2468.660 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 2468.660 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 2468.660 ; gain = 888.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu47dr-fsve1156-2-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 2468.660 ; gain = 888.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 2468.660 ; gain = 888.559
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'jtag_axi_v1_2_23_cmd_decode'
+INFO: [Synth 8-802] inferred FSM for state register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft'
+INFO: [Synth 8-802] inferred FSM for state register 'wr_done_state_reg' in module 'jtag_axi_v1_2_23_jtag_axi_engine'
+INFO: [Synth 8-802] inferred FSM for state register 'rd_done_state_reg' in module 'jtag_axi_v1_2_23_jtag_axi_engine'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'jtag_axi_v1_2_23_write_axilite'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'jtag_axi_v1_2_23_read_axilite'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+           READ_CMD_FIFO |                               01 |                               01
+         AXI_TRANSACTION |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'jtag_axi_v1_2_23_cmd_decode'
+INFO: [Synth 8-6159] Found Keep on FSM register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft', re-encoding will not be performed
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               10 |                               10
+       both_stages_valid |                               11 |                               11
+            stage2_valid |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                RDQ_IDLE |                              001 |                              001
+             RDQ_CMD_CNT |                              010 |                              010
+            RDQ_DONE_CNT |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rd_done_state_reg' using encoding 'one-hot' in module 'jtag_axi_v1_2_23_jtag_axi_engine'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                WRQ_IDLE |                              001 |                              001
+             WRQ_CMD_CNT |                              010 |                              010
+            WRQ_DONE_CNT |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wr_done_state_reg' using encoding 'one-hot' in module 'jtag_axi_v1_2_23_jtag_axi_engine'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            READ_TX_FIFO |                           000001 |                           000001
+        AXI_WR_ADDR_DATA |                           000010 |                           000010
+      AXI_WR_SLAVE_READY |                           000100 |                           000100
+             WAIT_WREADY |                           010000 |                           010000
+            WAIT_AWREADY |                           001000 |                           001000
+         AXI_WR_RESPONSE |                           100000 |                           100000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'jtag_axi_v1_2_23_write_axilite'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                READ_AXI |                              001 |                              001
+             AXI_RD_ADDR |                              010 |                              010
+             AXI_RD_DATA |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'jtag_axi_v1_2_23_read_axilite'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2468.660 ; gain = 888.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 4272 (col length:192)
+BRAMs: 2160 (col length: RAMB18 192 RAMB36 96)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2468.660 ; gain = 888.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 2771.258 ; gain = 1191.156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 2793.438 ; gain = 1213.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 2805.680 ; gain = 1225.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 3011.402 ; gain = 1431.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 3011.402 ; gain = 1431.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 3011.402 ; gain = 1431.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 3011.402 ; gain = 1431.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 3011.402 ; gain = 1431.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 3011.402 ; gain = 1431.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |LUT1     |    17|
+|2     |LUT2     |   132|
+|3     |LUT3     |   107|
+|4     |LUT4     |   103|
+|5     |LUT5     |    74|
+|6     |LUT6     |   155|
+|7     |RAM64M8  |    20|
+|8     |RAMB18E2 |     1|
+|9     |RAMB36E2 |     2|
+|10    |SRL16E   |     9|
+|11    |FDRE     |  1765|
+|12    |FDSE     |    12|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 3011.402 ; gain = 1431.301
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:34 . Memory (MB): peak = 3011.402 ; gain = 1431.301
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 3011.402 ; gain = 1431.301
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 3011.402 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3011.402 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 20 instances were transformed.
+  RAM64M8 => RAM64M8 (RAMD64E(x8)): 20 instances
+
+Synth Design complete | Checksum: eb7a6632
+INFO: [Common 17-83] Releasing license: Synthesis
+140 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 3011.402 ; gain = 2404.441
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 3011.402 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'E:/s9_dac9000/b512s9g_opt1/rf_awg_scope_v1.runs/jtag_awg_axi_synth_1/jtag_awg_axi.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP jtag_awg_axi, cache-ID = 494ef646db1b8a72
+INFO: [Coretcl 2-1174] Renamed 92 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 3011.402 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'E:/s9_dac9000/b512s9g_opt1/rf_awg_scope_v1.runs/jtag_awg_axi_synth_1/jtag_awg_axi.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file jtag_awg_axi_utilization_synth.rpt -pb jtag_awg_axi_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Nov  8 16:44:44 2026...

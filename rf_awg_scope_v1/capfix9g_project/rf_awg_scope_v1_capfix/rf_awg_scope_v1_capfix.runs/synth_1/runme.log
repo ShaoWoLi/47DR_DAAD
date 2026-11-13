@@ -1,0 +1,898 @@
+
+*** Running vivado
+    with args -log adaloop_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source adaloop_top.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Tue Nov 10 09:48:43 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source adaloop_top.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/AMDDesignTools/2025.2/Vivado/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.srcs/utils_1/imports/synth_1/adaloop_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.srcs/utils_1/imports/synth_1/adaloop_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top adaloop_top -part xczu47dr-fsve1156-2-i
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu47dr'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu47dr'
+INFO: [Device 21-403] Loading part xczu47dr-fsve1156-2-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9184
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2057.992 ; gain = 385.586
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'axi_rd_stb', assumed default net type 'wire' [E:/s9_dac9000/rtl/user_control.v:94]
+INFO: [Synth 8-11241] undeclared symbol 'pl_clk', assumed default net type 'wire' [E:/47dr_ADDA/VitisPrj/47dr_daad/rf_awg_scope_v1/rtl/candidates/dac9g_mts/adaloop_top.v:295]
+WARNING: [Synth 8-8895] 'pl_clk' is already implicitly declared on line 295 [E:/47dr_ADDA/VitisPrj/47dr_daad/rf_awg_scope_v1/rtl/candidates/dac9g_mts/adaloop_top.v:334]
+INFO: [Synth 8-11241] undeclared symbol 'pl_sysref', assumed default net type 'wire' [E:/47dr_ADDA/VitisPrj/47dr_daad/rf_awg_scope_v1/rtl/candidates/dac9g_mts/adaloop_top.v:349]
+INFO: [Synth 8-6157] synthesizing module 'adaloop_top' [E:/47dr_ADDA/VitisPrj/47dr_daad/rf_awg_scope_v1/rtl/candidates/dac9g_mts/adaloop_top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'system' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:602]
+INFO: [Synth 8-6157] synthesizing module 'system_clk_wiz_0_0' [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/system_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_clk_wiz_0_0' (0#1) [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/system_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_clk_wiz_adc_0' [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/system_clk_wiz_adc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_clk_wiz_adc_0' (0#1) [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/system_clk_wiz_adc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_ps8_0_axi_periph_0' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1354]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_N6CHY9' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_N6CHY9' (0#1) [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:13]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1YGIC8G' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:128]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1YGIC8G' (0#1) [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:128]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1MV52F6' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:243]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1MV52F6' (0#1) [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:243]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_RR89KG' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:358]
+INFO: [Synth 8-6157] synthesizing module 'system_ps8_0_axi_periph_imp_auto_pc_0' [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/system_ps8_0_axi_periph_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_ps8_0_axi_periph_imp_auto_pc_0' (0#1) [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/system_ps8_0_axi_periph_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_RR89KG' (0#1) [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:358]
+INFO: [Synth 8-6157] synthesizing module 'system_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0' [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/system_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0' (0#1) [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/system_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'system_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0' is unconnected for instance 'xbar' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1891]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'system_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0' is unconnected for instance 'xbar' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1891]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'system_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0' has 40 connections declared, but only 38 given [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1891]
+INFO: [Synth 8-6155] done synthesizing module 'system_ps8_0_axi_periph_0' (0#1) [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1354]
+INFO: [Synth 8-6157] synthesizing module 'system_rst_adc_clk_0' [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/system_rst_adc_clk_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_rst_adc_clk_0' (0#1) [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/system_rst_adc_clk_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'system_rst_adc_clk_0' is unconnected for instance 'rst_adc_clk' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1136]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'system_rst_adc_clk_0' is unconnected for instance 'rst_adc_clk' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1136]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'system_rst_adc_clk_0' is unconnected for instance 'rst_adc_clk' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1136]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'system_rst_adc_clk_0' is unconnected for instance 'rst_adc_clk' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1136]
+WARNING: [Synth 8-7023] instance 'rst_adc_clk' of module 'system_rst_adc_clk_0' has 10 connections declared, but only 6 given [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1136]
+INFO: [Synth 8-6157] synthesizing module 'system_rst_ps8_0_99M_0' [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/system_rst_ps8_0_99M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_rst_ps8_0_99M_0' (0#1) [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/system_rst_ps8_0_99M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'system_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1143]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'system_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1143]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'system_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1143]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'system_rst_ps8_0_99M_0' is unconnected for instance 'rst_ps8_0_99M' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1143]
+WARNING: [Synth 8-7023] instance 'rst_ps8_0_99M' of module 'system_rst_ps8_0_99M_0' has 10 connections declared, but only 6 given [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1143]
+INFO: [Synth 8-6157] synthesizing module 'system_proc_sys_reset_0_0' [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/system_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_proc_sys_reset_0_0' (0#1) [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/system_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'system_proc_sys_reset_0_0' is unconnected for instance 'rst_rf_clk' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1150]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'system_proc_sys_reset_0_0' is unconnected for instance 'rst_rf_clk' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1150]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'system_proc_sys_reset_0_0' is unconnected for instance 'rst_rf_clk' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1150]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'system_proc_sys_reset_0_0' is unconnected for instance 'rst_rf_clk' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1150]
+WARNING: [Synth 8-7023] instance 'rst_rf_clk' of module 'system_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1150]
+INFO: [Synth 8-6157] synthesizing module 'system_up_axi_0_0' [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/system_up_axi_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_up_axi_0_0' (0#1) [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/system_up_axi_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_usp_rf_data_converter_0_0' [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/system_usp_rf_data_converter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_usp_rf_data_converter_0_0' (0#1) [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/system_usp_rf_data_converter_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'clk_adc0' of module 'system_usp_rf_data_converter_0_0' is unconnected for instance 'usp_rf_data_converter_0' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1185]
+WARNING: [Synth 8-7071] port 'clk_adc2' of module 'system_usp_rf_data_converter_0_0' is unconnected for instance 'usp_rf_data_converter_0' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1185]
+WARNING: [Synth 8-7071] port 'clk_adc3' of module 'system_usp_rf_data_converter_0_0' is unconnected for instance 'usp_rf_data_converter_0' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1185]
+WARNING: [Synth 8-7071] port 'clk_dac0' of module 'system_usp_rf_data_converter_0_0' is unconnected for instance 'usp_rf_data_converter_0' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1185]
+WARNING: [Synth 8-7071] port 'clk_dac1' of module 'system_usp_rf_data_converter_0_0' is unconnected for instance 'usp_rf_data_converter_0' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1185]
+WARNING: [Synth 8-7071] port 'clk_dac3' of module 'system_usp_rf_data_converter_0_0' is unconnected for instance 'usp_rf_data_converter_0' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1185]
+WARNING: [Synth 8-7071] port 'irq' of module 'system_usp_rf_data_converter_0_0' is unconnected for instance 'usp_rf_data_converter_0' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1185]
+WARNING: [Synth 8-7023] instance 'usp_rf_data_converter_0' of module 'system_usp_rf_data_converter_0_0' has 132 connections declared, but only 125 given [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1185]
+INFO: [Synth 8-6157] synthesizing module 'system_zynq_ultra_ps_e_0_0' [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/system_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_zynq_ultra_ps_e_0_0' (0#1) [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/system_zynq_ultra_ps_e_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'maxigp2_awuser' of module 'system_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1311]
+WARNING: [Synth 8-7071] port 'maxigp2_aruser' of module 'system_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1311]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'system_zynq_ultra_ps_e_0_0' has 42 connections declared, but only 40 given [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:1311]
+INFO: [Synth 8-6155] done synthesizing module 'system' (0#1) [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/synth/system.v:602]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [E:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp_diablo.v:82819]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (0#1) [E:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp_diablo.v:82819]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [E:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp_diablo.v:2678]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [E:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp_diablo.v:2678]
+INFO: [Synth 8-6157] synthesizing module 'user_control' [E:/s9_dac9000/rtl/user_control.v:22]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/s9_dac9000/rtl/user_control.v:80]
+INFO: [Synth 8-6155] done synthesizing module 'user_control' (0#1) [E:/s9_dac9000/rtl/user_control.v:22]
+INFO: [Synth 8-6157] synthesizing module 'jtag_awg_axi' [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/jtag_awg_axi_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'jtag_awg_axi' (0#1) [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/jtag_awg_axi_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BUFGCE_DIV' [E:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp_diablo.v:2718]
+	Parameter BUFGCE_DIVIDE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'BUFGCE_DIV' (0#1) [E:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp_diablo.v:2718]
+INFO: [Synth 8-6157] synthesizing module 'BUFGCE_DIV__parameterized0' [E:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp_diablo.v:2718]
+	Parameter BUFGCE_DIVIDE bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'BUFGCE_DIV__parameterized0' (0#1) [E:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp_diablo.v:2718]
+INFO: [Synth 8-6157] synthesizing module 'reset_sync' [E:/s9_dac9000/rtl/reset_sync.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'reset_sync' (0#1) [E:/s9_dac9000/rtl/reset_sync.v:2]
+INFO: [Synth 8-6157] synthesizing module 'awg_subsystem' [E:/s9_dac9000/rtl/awg_subsystem.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'awg_wave_bank' [E:/s9_dac9000/rtl/awg_wave_bank.sv:5]
+	Parameter ADDR_BITS bound to: 11 - type: integer 
+	Parameter DATA_WIDTH bound to: 512 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_tdpram' [E:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:9490]
+	Parameter MEMORY_SIZE bound to: 1048576 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter CLOCKING_MODE bound to: independent_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 512 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 512 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 11 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: read_first - type: string 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 512 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 512 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 11 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 2 - type: integer 
+	Parameter WRITE_MODE_B bound to: read_first - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [E:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [E:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_tdpram' (0#1) [E:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:9490]
+INFO: [Synth 8-6155] done synthesizing module 'awg_wave_bank' (0#1) [E:/s9_dac9000/rtl/awg_wave_bank.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'axis_wide_gearbox' [E:/s9_dac9000/rtl/axis_wide_gearbox.sv:2]
+	Parameter S_DATA_WIDTH bound to: 512 - type: integer 
+	Parameter M_DATA_WIDTH bound to: 256 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axis_wide_gearbox' (0#1) [E:/s9_dac9000/rtl/axis_wide_gearbox.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'axis_register_slice' [E:/s9_dac9000/rtl/axis_register_slice.sv:2]
+	Parameter DATA_WIDTH bound to: 256 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axis_register_slice' (0#1) [E:/s9_dac9000/rtl/axis_register_slice.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'awg_control' [E:/47dr_ADDA/capfix9g_src/awg_control.sv:4]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/47dr_ADDA/capfix9g_src/awg_control.sv:184]
+INFO: [Synth 8-6155] done synthesizing module 'awg_control' (0#1) [E:/47dr_ADDA/capfix9g_src/awg_control.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'awg_player' [E:/s9_dac9000/rtl/awg_player.sv:2]
+	Parameter ADDR_BITS bound to: 11 - type: integer 
+	Parameter DATA_WIDTH bound to: 512 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'awg_player' (0#1) [E:/s9_dac9000/rtl/awg_player.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'awg_subsystem' (0#1) [E:/s9_dac9000/rtl/awg_subsystem.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'adc_capture' [E:/47dr_ADDA/capfix9g_src/adc_capture.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'adc_async_fifo' [E:/47dr_ADDA/capfix9g_src/adc_capture.sv:225]
+	Parameter WIDTH bound to: 6144 - type: integer 
+	Parameter ADDR_BITS bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'adc_async_fifo' (0#1) [E:/47dr_ADDA/capfix9g_src/adc_capture.sv:225]
+INFO: [Synth 8-6155] done synthesizing module 'adc_capture' (0#1) [E:/47dr_ADDA/capfix9g_src/adc_capture.sv:2]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/47dr_ADDA/VitisPrj/47dr_daad/rf_awg_scope_v1/rtl/candidates/dac9g_mts/adaloop_top.v:461]
+INFO: [Synth 8-6157] synthesizing module 'ila_awg_scope' [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/ila_awg_scope_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_awg_scope' (0#1) [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/.Xil/Vivado-46176-DESKTOP-R1144H2/realtime/ila_awg_scope_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'adaloop_top' (0#1) [E:/47dr_ADDA/VitisPrj/47dr_daad/rf_awg_scope_v1/rtl/candidates/dac9g_mts/adaloop_top.v:23]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [E:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3087]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'scope_ila'. This will prevent further optimization [E:/47dr_ADDA/VitisPrj/47dr_daad/rf_awg_scope_v1/rtl/candidates/dac9g_mts/adaloop_top.v:461]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'adc_capture_i'. This will prevent further optimization [E:/47dr_ADDA/VitisPrj/47dr_daad/rf_awg_scope_v1/rtl/candidates/dac9g_mts/adaloop_top.v:452]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'awg_i'. This will prevent further optimization [E:/47dr_ADDA/VitisPrj/47dr_daad/rf_awg_scope_v1/rtl/candidates/dac9g_mts/adaloop_top.v:436]
+WARNING: [Synth 8-7129] Port sleep in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_word_addr[15] in module awg_wave_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sample_zero in module awg_wave_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port up_waddr[1] in module user_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port up_waddr[0] in module user_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port up_raddr[1] in module user_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port up_raddr[0] in module user_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dev_clk_locked in module user_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_RR89KG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_RR89KG is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m02_couplers_imp_1MV52F6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m02_couplers_imp_1MV52F6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m02_couplers_imp_1MV52F6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m02_couplers_imp_1MV52F6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m01_couplers_imp_1YGIC8G is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m01_couplers_imp_1YGIC8G is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m01_couplers_imp_1YGIC8G is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m01_couplers_imp_1YGIC8G is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m00_couplers_imp_N6CHY9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m00_couplers_imp_N6CHY9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m00_couplers_imp_N6CHY9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m00_couplers_imp_N6CHY9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module system_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module system_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ACLK in module system_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ARESETN in module system_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ACLK in module system_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ARESETN in module system_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module system_ps8_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module system_ps8_0_axi_periph_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2388.684 ; gain = 716.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2388.684 ; gain = 716.277
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2388.684 ; gain = 716.277
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2779.820 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0/system_clk_wiz_0_0_in_context.xdc] for cell 'system_i/clk_wiz_0'
+Finished Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0/system_clk_wiz_0_0_in_context.xdc] for cell 'system_i/clk_wiz_0'
+Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0_in_context.xdc] for cell 'system_i/rst_rf_clk'
+Finished Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0_in_context.xdc] for cell 'system_i/rst_rf_clk'
+Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0/system_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0/system_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0_in_context.xdc] for cell 'system_i/ps8_0_axi_periph/xbar'
+Finished Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0/system_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0/system_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0_in_context.xdc] for cell 'system_i/ps8_0_axi_periph/xbar'
+Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_pc_0/system_ps8_0_axi_periph_imp_auto_pc_0/system_ps8_0_axi_periph_imp_auto_pc_0_in_context.xdc] for cell 'system_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_pc_0/system_ps8_0_axi_periph_imp_auto_pc_0/system_ps8_0_axi_periph_imp_auto_pc_0_in_context.xdc] for cell 'system_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/ip/system_rst_ps8_0_99M_0/system_rst_ps8_0_99M_0/system_rst_ps8_0_99M_0_in_context.xdc] for cell 'system_i/rst_ps8_0_99M'
+Finished Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/ip/system_rst_ps8_0_99M_0/system_rst_ps8_0_99M_0/system_rst_ps8_0_99M_0_in_context.xdc] for cell 'system_i/rst_ps8_0_99M'
+Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/ip/system_up_axi_0_0/system_up_axi_0_0/system_up_axi_0_0_in_context.xdc] for cell 'system_i/up_axi_0'
+Finished Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/ip/system_up_axi_0_0/system_up_axi_0_0/system_up_axi_0_0_in_context.xdc] for cell 'system_i/up_axi_0'
+Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/ip/system_usp_rf_data_converter_0_0/system_usp_rf_data_converter_0_0/system_usp_rf_data_converter_0_0_in_context.xdc] for cell 'system_i/usp_rf_data_converter_0'
+Finished Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/ip/system_usp_rf_data_converter_0_0/system_usp_rf_data_converter_0_0/system_usp_rf_data_converter_0_0_in_context.xdc] for cell 'system_i/usp_rf_data_converter_0'
+Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'system_i/zynq_ultra_ps_e_0'
+Finished Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'system_i/zynq_ultra_ps_e_0'
+Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/ip/system_rst_adc_clk_0/system_rst_adc_clk_0/system_rst_adc_clk_0_in_context.xdc] for cell 'system_i/rst_adc_clk'
+Finished Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/ip/system_rst_adc_clk_0/system_rst_adc_clk_0/system_rst_adc_clk_0_in_context.xdc] for cell 'system_i/rst_adc_clk'
+Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/ip/system_clk_wiz_adc_0/system_clk_wiz_adc_0/system_clk_wiz_adc_0_in_context.xdc] for cell 'system_i/clk_wiz_adc'
+Finished Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/bd/system/ip/system_clk_wiz_adc_0/system_clk_wiz_adc_0/system_clk_wiz_adc_0_in_context.xdc] for cell 'system_i/clk_wiz_adc'
+Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/ip/ila_awg_scope/ila_awg_scope/ila_awg_scope_in_context.xdc] for cell 'scope_ila'
+Finished Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/ip/ila_awg_scope/ila_awg_scope/ila_awg_scope_in_context.xdc] for cell 'scope_ila'
+Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/ip/jtag_awg_axi/jtag_awg_axi/jtag_awg_axi_in_context.xdc] for cell 'jtag_axi_i'
+Finished Parsing XDC File [e:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.gen/sources_1/ip/jtag_awg_axi/jtag_awg_axi/jtag_awg_axi_in_context.xdc] for cell 'jtag_axi_i'
+Parsing XDC File [E:/s9_dac9000/constraints/board.xdc]
+Finished Parsing XDC File [E:/s9_dac9000/constraints/board.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/s9_dac9000/constraints/board.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/adaloop_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/adaloop_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [E:/s9_dac9000/constraints/timing.xdc]
+Finished Parsing XDC File [E:/s9_dac9000/constraints/timing.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/s9_dac9000/constraints/timing.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/adaloop_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/adaloop_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/dont_touch.xdc]
+INFO: [Timing 38-2] Deriving generated clocks
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/adaloop_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/adaloop_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 8 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 4012.348 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 2 instances
+
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:02 ; elapsed = 00:00:57 . Memory (MB): peak = 4012.348 ; gain = 2339.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu47dr-fsve1156-2-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:02 ; elapsed = 00:00:57 . Memory (MB): peak = 4012.348 ; gain = 2339.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:00:57 . Memory (MB): peak = 4012.348 ; gain = 2339.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6702] IncrSynth : Design change found in an area of the design that prevents previous synthesis information being used, Reverting to default synthesis
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:01:03 ; elapsed = 00:00:59 . Memory (MB): peak = 4012.348 ; gain = 2339.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:01:03 ; elapsed = 00:00:59 . Memory (MB): peak = 4012.348 ; gain = 2339.941
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'command_state_reg' in module 'awg_control'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'awg_player'
+INFO: [Synth 8-3971] The signal "xpm_memory_base:/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                CMD_IDLE |                            00001 |                              000
+              CMD_DECODE |                            00010 |                              001
+                CMD_STOP |                            00100 |                              011
+               CMD_START |                            01000 |                              010
+              CMD_FINISH |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'command_state_reg' using encoding 'one-hot' in module 'awg_control'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                               00
+                   PRIME |                              100 |                               01
+                    PLAY |                              010 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'awg_player'
+INFO: [Synth 8-6904] The RAM "adc_async_fifo:/mem_reg" of size (depth=8 x width=6144) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:04 ; elapsed = 00:01:00 . Memory (MB): peak = 4012.348 ; gain = 2339.941
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : Design change found in an area of the design that prevents previous synthesis information being used
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   5 Input   32 Bit       Adders := 8     
+	   2 Input   19 Bit       Adders := 1     
+	   2 Input   18 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 1     
+	   2 Input   15 Bit       Adders := 2     
+	   2 Input   14 Bit       Adders := 2     
+	   2 Input   11 Bit       Adders := 9     
+	   2 Input    5 Bit       Adders := 32    
+	   5 Input    5 Bit       Adders := 8     
+	   2 Input    4 Bit       Adders := 4     
+	   2 Input    2 Bit       Adders := 18    
+	   2 Input    1 Bit       Adders := 8     
++---XORs : 
+	   2 Input      5 Bit         XORs := 16    
+	   2 Input      4 Bit         XORs := 3     
+	   2 Input      1 Bit         XORs := 33    
++---Registers : 
+	              768 Bit    Registers := 8     
+	              576 Bit    Registers := 8     
+	              512 Bit    Registers := 40    
+	              256 Bit    Registers := 24    
+	              192 Bit    Registers := 8     
+	               32 Bit    Registers := 7     
+	               18 Bit    Registers := 3     
+	               16 Bit    Registers := 1     
+	               14 Bit    Registers := 2     
+	               12 Bit    Registers := 4     
+	               11 Bit    Registers := 9     
+	                8 Bit    Registers := 15    
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 64    
+	                4 Bit    Registers := 20    
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 39    
+	                1 Bit    Registers := 149   
++---RAMs : 
+	            1024K Bit	(2048 X 512 bit)          RAMs := 8     
+	            1023K Bit	(1365 X 768 bit)          RAMs := 8     
+	              48K Bit	(8 X 6144 bit)          RAMs := 1     
+	               8K Bit	(16 X 512 bit)          RAMs := 8     
++---Muxes : 
+	   2 Input  512 Bit        Muxes := 760   
+	   2 Input  256 Bit        Muxes := 24    
+	   4 Input  256 Bit        Muxes := 8     
+	   3 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 6     
+	   2 Input   20 Bit        Muxes := 1     
+	   7 Input   18 Bit        Muxes := 1     
+	   5 Input   18 Bit        Muxes := 1     
+	   2 Input   18 Bit        Muxes := 3     
+	   3 Input   16 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 8     
+	   3 Input   11 Bit        Muxes := 8     
+	   2 Input    8 Bit        Muxes := 13    
+	   3 Input    8 Bit        Muxes := 2     
+	   3 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 49    
+	   5 Input    5 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 28    
+	   3 Input    2 Bit        Muxes := 17    
+	   5 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	  13 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 184   
+	   3 Input    1 Bit        Muxes := 23    
+	   4 Input    1 Bit        Muxes := 17    
+	   5 Input    1 Bit        Muxes := 13    
+	   9 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 4272 (col length:192)
+BRAMs: 2160 (col length: RAMB18 192 RAMB36 96)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base__5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base__5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base__5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base__5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base__5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_word_addr[15] in module awg_wave_bank__5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sample_zero in module awg_wave_bank__5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base__4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base__4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base__4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base__4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base__4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_word_addr[15] in module awg_wave_bank__4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sample_zero in module awg_wave_bank__4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base__3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base__3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base__3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base__3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base__3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_word_addr[15] in module awg_wave_bank__3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sample_zero in module awg_wave_bank__3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base__2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base__2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base__2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base__2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base__2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_word_addr[15] in module awg_wave_bank__2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sample_zero in module awg_wave_bank__2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base__1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base__1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base__1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base__1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base__1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_word_addr[15] in module awg_wave_bank__1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sample_zero in module awg_wave_bank__1 is either unconnected or has no load
+INFO: [Synth 8-3971] The signal "\channel[7].wave_ram /memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "\channel[6].wave_ram /memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "\channel[3].wave_ram /memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "\channel[5].wave_ram /memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "\channel[4].wave_ram /memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg" was recognized as a true dual port RAM template.
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_word_addr[15] in module awg_wave_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sample_zero in module awg_wave_bank is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base__7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base__7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base__7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base__7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base__7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_word_addr[15] in module awg_wave_bank__7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sample_zero in module awg_wave_bank__7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base__6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base__6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base__6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base__6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base__6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port host_word_addr[15] in module awg_wave_bank__6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sample_zero in module awg_wave_bank__6 is either unconnected or has no load
+INFO: [Synth 8-3971] The signal "\channel[2].wave_ram /memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "\channel[1].wave_ram /memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "\channel[0].wave_ram /memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (control/\s_rresp_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (control/\s_bresp_reg[0] )
+INFO: [Synth 8-6904] The RAM "capture_fifo/mem_reg" of size (depth=8 x width=6144) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "capture_fifo/mem_reg" of size (depth=8 x width=6144) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_slot_reg[5] )
+INFO: [Synth 8-4471] merging register 'pack_phase_reg[1:0]' into 'pack_phase_reg[1:0]' [E:/s9_dac9000/rtl/adc_capture.sv:54]
+WARNING: [Synth 8-3917] design adc_capture__GB4 has port P[5] driven by constant 0
+WARNING: [Synth 8-3917] design adc_capture__GB4 has port P[4] driven by constant 0
+WARNING: [Synth 8-3917] design adc_capture__GB4 has port P[3] driven by constant 0
+WARNING: [Synth 8-3917] design adc_capture__GB4 has port P[2] driven by constant 0
+WARNING: [Synth 8-3917] design adc_capture__GB4 has port P[1] driven by constant 0
+WARNING: [Synth 8-3917] design adc_capture__GB4 has port P[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:26 ; elapsed = 00:01:26 . Memory (MB): peak = 4012.348 ; gain = 2339.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++----------------------------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+---------------------------------------------+
+|Module Name                                         | RTL Object                                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights                             | 
++----------------------------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+---------------------------------------------+
+|\channel[0].gearbox                                 | storage_reg                                      | 16 x 512(NO_CHANGE)    | W |   | 16 x 512(WRITE_FIRST)  |   | R | Port A and B     | 1      | 7      |                                             | 
+|\channel[7].wave_ram /memory_i/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | 2 K x 512(READ_FIRST)  | W | R | 2 K x 512(READ_FIRST)  | W | R | Port A and B     | 0      | 32     |                                             | 
+|\channel[1].gearbox                                 | storage_reg                                      | 16 x 512(NO_CHANGE)    | W |   | 16 x 512(WRITE_FIRST)  |   | R | Port A and B     | 1      | 7      |                                             | 
+|\channel[6].wave_ram /memory_i/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | 2 K x 512(READ_FIRST)  | W | R | 2 K x 512(READ_FIRST)  | W | R | Port A and B     | 0      | 32     |                                             | 
+|\channel[2].gearbox                                 | storage_reg                                      | 16 x 512(NO_CHANGE)    | W |   | 16 x 512(WRITE_FIRST)  |   | R | Port A and B     | 1      | 7      |                                             | 
+|\channel[3].wave_ram /memory_i/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | 2 K x 512(READ_FIRST)  | W | R | 2 K x 512(READ_FIRST)  | W | R | Port A and B     | 0      | 32     |                                             | 
+|\channel[5].wave_ram /memory_i/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | 2 K x 512(READ_FIRST)  | W | R | 2 K x 512(READ_FIRST)  | W | R | Port A and B     | 0      | 32     |                                             | 
+|\channel[4].wave_ram /memory_i/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | 2 K x 512(READ_FIRST)  | W | R | 2 K x 512(READ_FIRST)  | W | R | Port A and B     | 0      | 32     |                                             | 
+|\channel[4].gearbox                                 | storage_reg                                      | 16 x 512(NO_CHANGE)    | W |   | 16 x 512(WRITE_FIRST)  |   | R | Port A and B     | 1      | 7      |                                             | 
+|\channel[3].gearbox                                 | storage_reg                                      | 16 x 512(NO_CHANGE)    | W |   | 16 x 512(WRITE_FIRST)  |   | R | Port A and B     | 1      | 7      |                                             | 
+|\channel[2].wave_ram /memory_i/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | 2 K x 512(READ_FIRST)  | W | R | 2 K x 512(READ_FIRST)  | W | R | Port A and B     | 0      | 32     |                                             | 
+|\channel[1].wave_ram /memory_i/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | 2 K x 512(READ_FIRST)  | W | R | 2 K x 512(READ_FIRST)  | W | R | Port A and B     | 0      | 32     |                                             | 
+|\channel[7].gearbox                                 | storage_reg                                      | 16 x 512(NO_CHANGE)    | W |   | 16 x 512(WRITE_FIRST)  |   | R | Port A and B     | 1      | 7      |                                             | 
+|\channel[0].wave_ram /memory_i/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | 2 K x 512(READ_FIRST)  | W | R | 2 K x 512(READ_FIRST)  | W | R | Port A and B     | 0      | 32     |                                             | 
+|\channel[6].gearbox                                 | storage_reg                                      | 16 x 512(NO_CHANGE)    | W |   | 16 x 512(WRITE_FIRST)  |   | R | Port A and B     | 1      | 7      |                                             | 
+|\channel[5].gearbox                                 | storage_reg                                      | 16 x 512(NO_CHANGE)    | W |   | 16 x 512(WRITE_FIRST)  |   | R | Port A and B     | 1      | 7      |                                             | 
+|adc_capture__GB0                                    | channel_memory[3].mem_reg                        | 1 K x 768(NO_CHANGE)   | W |   | 1 K x 768(WRITE_FIRST) |   | R | Port A and B     | 0      | 43     | 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1 | 
+|adc_capture__GB0                                    | channel_memory[2].mem_reg                        | 1 K x 768(NO_CHANGE)   | W |   | 1 K x 768(WRITE_FIRST) |   | R | Port A and B     | 0      | 43     | 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1 | 
+|adc_capture__GB0                                    | channel_memory[7].mem_reg                        | 1 K x 768(NO_CHANGE)   | W |   | 1 K x 768(WRITE_FIRST) |   | R | Port A and B     | 0      | 43     | 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1 | 
+|adc_capture__GB0                                    | channel_memory[6].mem_reg                        | 1 K x 768(NO_CHANGE)   | W |   | 1 K x 768(WRITE_FIRST) |   | R | Port A and B     | 0      | 43     | 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1 | 
+|adc_capture__GB0                                    | channel_memory[5].mem_reg                        | 1 K x 768(NO_CHANGE)   | W |   | 1 K x 768(WRITE_FIRST) |   | R | Port A and B     | 0      | 43     | 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1 | 
+|adc_capture__GB0                                    | channel_memory[4].mem_reg                        | 1 K x 768(NO_CHANGE)   | W |   | 1 K x 768(WRITE_FIRST) |   | R | Port A and B     | 0      | 43     | 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1 | 
+|adc_capture__GB0                                    | channel_memory[0].mem_reg                        | 1 K x 768(NO_CHANGE)   | W |   | 1 K x 768(WRITE_FIRST) |   | R | Port A and B     | 0      | 43     | 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1 | 
+|adc_capture__GB0                                    | channel_memory[1].mem_reg                        | 1 K x 768(NO_CHANGE)   | W |   | 1 K x 768(WRITE_FIRST) |   | R | Port A and B     | 0      | 43     | 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1 | 
++----------------------------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+---------------------------------------------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-------------+------------+-----------+----------------------+-----------------+
+|Module Name  | RTL Object | Inference | Size (Depth x Width) | Primitives      | 
++-------------+------------+-----------+----------------------+-----------------+
+|capture_fifo | mem_reg    | Implied   | 8 x 6144             | RAM32M16 x 439  | 
++-------------+------------+-----------+----------------------+-----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:34 ; elapsed = 00:01:35 . Memory (MB): peak = 4012.348 ; gain = 2339.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:45 ; elapsed = 00:01:46 . Memory (MB): peak = 4012.348 ; gain = 2339.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++----------------------------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+---------------------------------------------+
+|Module Name                                         | RTL Object                                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights                             | 
++----------------------------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+---------------------------------------------+
+|\channel[0].gearbox                                 | storage_reg                                      | 16 x 512(NO_CHANGE)    | W |   | 16 x 512(WRITE_FIRST)  |   | R | Port A and B     | 1      | 7      |                                             | 
+|\channel[7].wave_ram /memory_i/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | 2 K x 512(READ_FIRST)  | W | R | 2 K x 512(READ_FIRST)  | W | R | Port A and B     | 0      | 32     |                                             | 
+|\channel[1].gearbox                                 | storage_reg                                      | 16 x 512(NO_CHANGE)    | W |   | 16 x 512(WRITE_FIRST)  |   | R | Port A and B     | 1      | 7      |                                             | 
+|\channel[6].wave_ram /memory_i/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | 2 K x 512(READ_FIRST)  | W | R | 2 K x 512(READ_FIRST)  | W | R | Port A and B     | 0      | 32     |                                             | 
+|\channel[2].gearbox                                 | storage_reg                                      | 16 x 512(NO_CHANGE)    | W |   | 16 x 512(WRITE_FIRST)  |   | R | Port A and B     | 1      | 7      |                                             | 
+|\channel[3].wave_ram /memory_i/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | 2 K x 512(READ_FIRST)  | W | R | 2 K x 512(READ_FIRST)  | W | R | Port A and B     | 0      | 32     |                                             | 
+|\channel[5].wave_ram /memory_i/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | 2 K x 512(READ_FIRST)  | W | R | 2 K x 512(READ_FIRST)  | W | R | Port A and B     | 0      | 32     |                                             | 
+|\channel[4].wave_ram /memory_i/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | 2 K x 512(READ_FIRST)  | W | R | 2 K x 512(READ_FIRST)  | W | R | Port A and B     | 0      | 32     |                                             | 
+|\channel[4].gearbox                                 | storage_reg                                      | 16 x 512(NO_CHANGE)    | W |   | 16 x 512(WRITE_FIRST)  |   | R | Port A and B     | 1      | 7      |                                             | 
+|\channel[3].gearbox                                 | storage_reg                                      | 16 x 512(NO_CHANGE)    | W |   | 16 x 512(WRITE_FIRST)  |   | R | Port A and B     | 1      | 7      |                                             | 
+|\channel[2].wave_ram /memory_i/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | 2 K x 512(READ_FIRST)  | W | R | 2 K x 512(READ_FIRST)  | W | R | Port A and B     | 0      | 32     |                                             | 
+|\channel[1].wave_ram /memory_i/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | 2 K x 512(READ_FIRST)  | W | R | 2 K x 512(READ_FIRST)  | W | R | Port A and B     | 0      | 32     |                                             | 
+|\channel[7].gearbox                                 | storage_reg                                      | 16 x 512(NO_CHANGE)    | W |   | 16 x 512(WRITE_FIRST)  |   | R | Port A and B     | 1      | 7      |                                             | 
+|\channel[0].wave_ram /memory_i/xpm_memory_base_inst | gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg | 2 K x 512(READ_FIRST)  | W | R | 2 K x 512(READ_FIRST)  | W | R | Port A and B     | 0      | 32     |                                             | 
+|\channel[6].gearbox                                 | storage_reg                                      | 16 x 512(NO_CHANGE)    | W |   | 16 x 512(WRITE_FIRST)  |   | R | Port A and B     | 1      | 7      |                                             | 
+|\channel[5].gearbox                                 | storage_reg                                      | 16 x 512(NO_CHANGE)    | W |   | 16 x 512(WRITE_FIRST)  |   | R | Port A and B     | 1      | 7      |                                             | 
+|adc_capture__GB0                                    | channel_memory[3].mem_reg                        | 1 K x 768(NO_CHANGE)   | W |   | 1 K x 768(WRITE_FIRST) |   | R | Port A and B     | 0      | 43     | 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1 | 
+|adc_capture__GB0                                    | channel_memory[2].mem_reg                        | 1 K x 768(NO_CHANGE)   | W |   | 1 K x 768(WRITE_FIRST) |   | R | Port A and B     | 0      | 43     | 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1 | 
+|adc_capture__GB0                                    | channel_memory[7].mem_reg                        | 1 K x 768(NO_CHANGE)   | W |   | 1 K x 768(WRITE_FIRST) |   | R | Port A and B     | 0      | 43     | 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1 | 
+|adc_capture__GB0                                    | channel_memory[6].mem_reg                        | 1 K x 768(NO_CHANGE)   | W |   | 1 K x 768(WRITE_FIRST) |   | R | Port A and B     | 0      | 43     | 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1 | 
+|adc_capture__GB0                                    | channel_memory[5].mem_reg                        | 1 K x 768(NO_CHANGE)   | W |   | 1 K x 768(WRITE_FIRST) |   | R | Port A and B     | 0      | 43     | 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1 | 
+|adc_capture__GB0                                    | channel_memory[4].mem_reg                        | 1 K x 768(NO_CHANGE)   | W |   | 1 K x 768(WRITE_FIRST) |   | R | Port A and B     | 0      | 43     | 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1 | 
+|adc_capture__GB0                                    | channel_memory[0].mem_reg                        | 1 K x 768(NO_CHANGE)   | W |   | 1 K x 768(WRITE_FIRST) |   | R | Port A and B     | 0      | 43     | 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1 | 
+|adc_capture__GB0                                    | channel_memory[1].mem_reg                        | 1 K x 768(NO_CHANGE)   | W |   | 1 K x 768(WRITE_FIRST) |   | R | Port A and B     | 0      | 43     | 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1 | 
++----------------------------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+---------------------------------------------+
+
+
+Distributed RAM: Final Mapping Report
++-------------+------------+-----------+----------------------+-----------------+
+|Module Name  | RTL Object | Inference | Size (Depth x Width) | Primitives      | 
++-------------+------------+-----------+----------------------+-----------------+
+|capture_fifo | mem_reg    | Implied   | 8 x 6144             | RAM32M16 x 439  | 
++-------------+------------+-----------+----------------------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'awg_i/i_0/channel[0].gearbox/rd_bin_reg_rep[0]' (FDCE) to 'awg_i/i_0/channel[0].gearbox/rd_bin_reg[0]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_0/channel[0].gearbox/rd_bin_reg_rep[1]' (FDCE) to 'awg_i/i_0/channel[0].gearbox/rd_bin_reg[1]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_0/channel[0].gearbox/rd_bin_reg_rep[2]' (FDCE) to 'awg_i/i_0/channel[0].gearbox/rd_bin_reg[2]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_0/channel[0].gearbox/rd_bin_reg_rep[3]' (FDCE) to 'awg_i/i_0/channel[0].gearbox/rd_bin_reg[3]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_0/channel[1].gearbox/rd_bin_reg_rep[0]' (FDCE) to 'awg_i/i_0/channel[1].gearbox/rd_bin_reg[0]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_0/channel[1].gearbox/rd_bin_reg_rep[1]' (FDCE) to 'awg_i/i_0/channel[1].gearbox/rd_bin_reg[1]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_0/channel[1].gearbox/rd_bin_reg_rep[2]' (FDCE) to 'awg_i/i_0/channel[1].gearbox/rd_bin_reg[2]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_0/channel[1].gearbox/rd_bin_reg_rep[3]' (FDCE) to 'awg_i/i_0/channel[1].gearbox/rd_bin_reg[3]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_0/channel[2].gearbox/rd_bin_reg_rep[0]' (FDCE) to 'awg_i/i_0/channel[2].gearbox/rd_bin_reg[0]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_0/channel[2].gearbox/rd_bin_reg_rep[1]' (FDCE) to 'awg_i/i_0/channel[2].gearbox/rd_bin_reg[1]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_0/channel[2].gearbox/rd_bin_reg_rep[2]' (FDCE) to 'awg_i/i_0/channel[2].gearbox/rd_bin_reg[2]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_0/channel[2].gearbox/rd_bin_reg_rep[3]' (FDCE) to 'awg_i/i_0/channel[2].gearbox/rd_bin_reg[3]'
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[0].gearbox/storage_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[0].gearbox/storage_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[0].gearbox/storage_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[0].gearbox/storage_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[0].gearbox/storage_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[0].gearbox/storage_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[0].gearbox/storage_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[0].gearbox/storage_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[7].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[1].gearbox/storage_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[1].gearbox/storage_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[1].gearbox/storage_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[1].gearbox/storage_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[1].gearbox/storage_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[1].gearbox/storage_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[1].gearbox/storage_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[1].gearbox/storage_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[6].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[2].gearbox/storage_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[2].gearbox/storage_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[2].gearbox/storage_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[2].gearbox/storage_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[2].gearbox/storage_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[2].gearbox/storage_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[2].gearbox/storage_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[2].gearbox/storage_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[3].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[3].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[3].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[3].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[3].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[3].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[3].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[3].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[3].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[3].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[3].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance awg_i/i_0/channel[3].wave_ram/memory_i/xpm_memory_base_inst/gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Common 17-14] Message 'Synth 8-7052' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-7052' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'awg_i/i_1/channel[4].gearbox/rd_bin_reg_rep[0]' (FDCE) to 'awg_i/i_1/channel[4].gearbox/rd_bin_reg[0]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_1/channel[4].gearbox/rd_bin_reg_rep[1]' (FDCE) to 'awg_i/i_1/channel[4].gearbox/rd_bin_reg[1]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_1/channel[4].gearbox/rd_bin_reg_rep[2]' (FDCE) to 'awg_i/i_1/channel[4].gearbox/rd_bin_reg[2]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_1/channel[4].gearbox/rd_bin_reg_rep[3]' (FDCE) to 'awg_i/i_1/channel[4].gearbox/rd_bin_reg[3]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_1/channel[3].gearbox/rd_bin_reg_rep[0]' (FDCE) to 'awg_i/i_1/channel[3].gearbox/rd_bin_reg[0]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_1/channel[3].gearbox/rd_bin_reg_rep[1]' (FDCE) to 'awg_i/i_1/channel[3].gearbox/rd_bin_reg[1]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_1/channel[3].gearbox/rd_bin_reg_rep[2]' (FDCE) to 'awg_i/i_1/channel[3].gearbox/rd_bin_reg[2]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_1/channel[3].gearbox/rd_bin_reg_rep[3]' (FDCE) to 'awg_i/i_1/channel[3].gearbox/rd_bin_reg[3]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_1/channel[7].gearbox/rd_bin_reg_rep[0]' (FDCE) to 'awg_i/i_1/channel[7].gearbox/rd_bin_reg[0]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_1/channel[7].gearbox/rd_bin_reg_rep[1]' (FDCE) to 'awg_i/i_1/channel[7].gearbox/rd_bin_reg[1]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_1/channel[7].gearbox/rd_bin_reg_rep[2]' (FDCE) to 'awg_i/i_1/channel[7].gearbox/rd_bin_reg[2]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_1/channel[7].gearbox/rd_bin_reg_rep[3]' (FDCE) to 'awg_i/i_1/channel[7].gearbox/rd_bin_reg[3]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_2/channel[6].gearbox/rd_bin_reg_rep[0]' (FDCE) to 'awg_i/i_2/channel[6].gearbox/rd_bin_reg[0]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_2/channel[6].gearbox/rd_bin_reg_rep[1]' (FDCE) to 'awg_i/i_2/channel[6].gearbox/rd_bin_reg[1]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_2/channel[6].gearbox/rd_bin_reg_rep[2]' (FDCE) to 'awg_i/i_2/channel[6].gearbox/rd_bin_reg[2]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_2/channel[6].gearbox/rd_bin_reg_rep[3]' (FDCE) to 'awg_i/i_2/channel[6].gearbox/rd_bin_reg[3]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_2/channel[5].gearbox/rd_bin_reg_rep[0]' (FDCE) to 'awg_i/i_2/channel[5].gearbox/rd_bin_reg[0]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_2/channel[5].gearbox/rd_bin_reg_rep[1]' (FDCE) to 'awg_i/i_2/channel[5].gearbox/rd_bin_reg[1]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_2/channel[5].gearbox/rd_bin_reg_rep[2]' (FDCE) to 'awg_i/i_2/channel[5].gearbox/rd_bin_reg[2]'
+INFO: [Synth 8-3886] merging instance 'awg_i/i_2/channel[5].gearbox/rd_bin_reg_rep[3]' (FDCE) to 'awg_i/i_2/channel[5].gearbox/rd_bin_reg[3]'
+INFO: [Synth 8-3886] merging instance 'adc_capture_i/i_0/capture_fifo/rd_gray_reg[3]' (FDRE) to 'adc_capture_i/i_0/capture_fifo/rd_bin_reg[3]'
+INFO: [Synth 8-3886] merging instance 'adc_capture_i/i_0/capture_fifo/wr_gray_reg[3]' (FDRE) to 'adc_capture_i/i_0/capture_fifo/wr_bin_reg[3]'
+INFO: [Common 17-14] Message 'Synth 8-7052' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:49 ; elapsed = 00:01:59 . Memory (MB): peak = 4012.348 ; gain = 2339.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:56 ; elapsed = 00:02:05 . Memory (MB): peak = 4012.348 ; gain = 2339.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:56 ; elapsed = 00:02:06 . Memory (MB): peak = 4012.348 ; gain = 2339.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:59 ; elapsed = 00:02:09 . Memory (MB): peak = 4012.348 ; gain = 2339.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:59 ; elapsed = 00:02:09 . Memory (MB): peak = 4012.348 ; gain = 2339.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:01 ; elapsed = 00:02:11 . Memory (MB): peak = 4012.348 ; gain = 2339.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:01 ; elapsed = 00:02:11 . Memory (MB): peak = 4012.348 ; gain = 2339.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------------------------+----------+
+|      |BlackBox name                                   |Instances |
++------+------------------------------------------------+----------+
+|1     |system_clk_wiz_0_0                              |         1|
+|2     |system_clk_wiz_adc_0                            |         1|
+|3     |system_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0 |         1|
+|4     |system_ps8_0_axi_periph_imp_auto_pc_0           |         1|
+|5     |system_rst_adc_clk_0                            |         1|
+|6     |system_rst_ps8_0_99M_0                          |         1|
+|7     |system_proc_sys_reset_0_0                       |         1|
+|8     |system_up_axi_0_0                               |         1|
+|9     |system_usp_rf_data_converter_0_0                |         1|
+|10    |system_zynq_ultra_ps_e_0_0                      |         1|
+|11    |jtag_awg_axi                                    |         1|
+|12    |ila_awg_scope                                   |         1|
++------+------------------------------------------------+----------+
+
+Report Cell Usage: 
++------+----------------------------------------------+------+
+|      |Cell                                          |Count |
++------+----------------------------------------------+------+
+|1     |ila_awg_scope                                 |     1|
+|2     |jtag_awg_axi                                  |     1|
+|3     |system_clk_wiz_0                              |     1|
+|4     |system_clk_wiz_adc                            |     1|
+|5     |system_proc_sys_reset_0                       |     1|
+|6     |system_ps8_0_axi_periph_imp_auto_pc           |     1|
+|7     |system_ps8_0_axi_periph_upgraded_ipi_imp_xbar |     1|
+|8     |system_rst_adc_clk                            |     1|
+|9     |system_rst_ps8_0_99M                          |     1|
+|10    |system_up_axi_0                               |     1|
+|11    |system_usp_rf_data_converter_0                |     1|
+|12    |system_zynq_ultra_ps_e_0                      |     1|
+|13    |BUFG                                          |     1|
+|14    |BUFGCE_DIV                                    |     2|
+|16    |CARRY8                                        |    27|
+|17    |LUT1                                          |   161|
+|18    |LUT2                                          |   801|
+|19    |LUT3                                          |  8662|
+|20    |LUT4                                          |   929|
+|21    |LUT5                                          |  5307|
+|22    |LUT6                                          |  9027|
+|23    |MUXF7                                         |  1293|
+|24    |MUXF8                                         |   640|
+|25    |RAM32M16                                      |   439|
+|26    |RAMB18E2                                      |     8|
+|27    |RAMB36E2                                      |   656|
+|32    |FDCE                                          |  6580|
+|33    |FDRE                                          | 11360|
+|34    |FDSE                                          |    46|
+|35    |IBUFDS                                        |     2|
+|36    |OBUF                                          |     2|
++------+----------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:01 ; elapsed = 00:02:11 . Memory (MB): peak = 4012.348 ; gain = 2339.941
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 63 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:04 ; elapsed = 00:01:27 . Memory (MB): peak = 4012.348 ; gain = 716.277
+Synthesis Optimization Complete : Time (s): cpu = 00:02:01 ; elapsed = 00:02:12 . Memory (MB): peak = 4012.348 ; gain = 2339.941
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.711 . Memory (MB): peak = 4012.348 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2402 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 4012.348 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 442 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 2 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 439 instances
+
+Synth Design complete | Checksum: caf1e6
+INFO: [Common 17-83] Releasing license: Synthesis
+263 Infos, 131 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:19 ; elapsed = 00:02:37 . Memory (MB): peak = 4012.348 ; gain = 3345.641
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 4012.348 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'E:/47dr_ADDA/capfix9g/rf_awg_scope_v1_capfix.runs/synth_1/adaloop_top.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 4012.348 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_utilization -file adaloop_top_utilization_synth.rpt -pb adaloop_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 10 09:51:36 2026...

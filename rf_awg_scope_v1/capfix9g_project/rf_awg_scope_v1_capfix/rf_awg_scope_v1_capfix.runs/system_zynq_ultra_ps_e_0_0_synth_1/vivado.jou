@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov  9 18:33:05 2026
+# Process ID         : 12204
+# Current directory  : E:/47dr_ADDA/stable9g/rf_awg_scope_v1_mts.runs/system_zynq_ultra_ps_e_0_0_synth_1
+# Command line       : vivado.exe -log system_zynq_ultra_ps_e_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_zynq_ultra_ps_e_0_0.tcl
+# Log file           : E:/47dr_ADDA/stable9g/rf_awg_scope_v1_mts.runs/system_zynq_ultra_ps_e_0_0_synth_1/system_zynq_ultra_ps_e_0_0.vds
+# Journal file       : E:/47dr_ADDA/stable9g/rf_awg_scope_v1_mts.runs/system_zynq_ultra_ps_e_0_0_synth_1\vivado.jou
+# Running On         : DESKTOP-R1144H2
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-13790F
+# CPU Frequency      : 2112 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 24
+# Host memory        : 34138 MB
+# Swap memory        : 28991 MB
+# Total Virtual      : 63129 MB
+# Available Virtual  : 25635 MB
+#-----------------------------------------------------------
+source system_zynq_ultra_ps_e_0_0.tcl -notrace
